@@ -28,3 +28,24 @@ console.log(produto.categorias[1]);
 produto.preco = 200;
 produto.disponivel = true;
 console.log(produto);
+
+// Pegue o mesmo objeto produto e adicione uma propriedade chamada fabricante.
+
+// Só que fabricante também será um objeto:
+
+// fabricante
+//    ├── nome
+//    ├── pais
+//    └── anoFundacao
+
+// Depois faça o programa mostrar somente o país do fabricante.
+
+produto.fabricante = {
+    nome: "Nike",
+    pais: "Brazil",
+    anoFundacao: 2026
+}
+
+console.log(produto.fabricante.pais);
+console.log(produto);
+
