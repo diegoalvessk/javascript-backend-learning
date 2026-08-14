@@ -67,21 +67,27 @@
 // // produto.vender();
 // // No final, mostre o estoque no console. Ele deverá estar em 17.
 
-const produto = {
-    nome: "Diego Alves",
-    preco: 190,
-    estoque: 20,
-    categorias: ["Brinquedos", "Roupas", "Eletronicos"],
+// const produto = {
+//     nome: "Diego Alves",
+//     preco: 190,
+//     estoque: 10,
+//     categorias: ["Brinquedos", "Roupas", "Eletronicos"],
 
-    vender: function()  {
-        this.estoque--;
-    }
-}
+//     vender: function(quantidade)  {
+//         if(this.estoque >= quantidade){
+//             this.estoque = this.estoque - quantidade;
+//             console.log("venda Realizada");
+//         }else{
+//             console.log("Estoque insuficiente");
+//         }
+//     }
+// }
 
-produto.vender();
-produto.vender();
-produto.vender();
+// produto.vender(3);
+// console.log(produto.estoque);
+// produto.vender(10);
+// console.log(produto.estoque);
 
-console.log(produto.estoque);
+// Próximo exercício — Carrinho de compras
 
-
+// Agora vamos juntar objeto + método + parâmetro + if/else + cálculo.
