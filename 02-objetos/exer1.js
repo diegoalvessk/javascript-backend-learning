@@ -91,3 +91,31 @@
 // Próximo exercício — Carrinho de compras
 
 // Agora vamos juntar objeto + método + parâmetro + if/else + cálculo.
+
+const produto = {
+    nome: "Notebook",
+    preco: 2500,
+    estoque: 10,
+
+    vender: function (quantidade){
+        if(this.estoque >= quantidade && quantidade != 0){
+            this.estoque = this.estoque - quantidade;
+            console.log("Venda Realizada");
+            console.log(`Total: ${quantidade * this.preco}.`);
+        }else if(this.estoque < quantidade && quantidade != 0){
+            console.log("Estoque insuficiente.");
+        }else if(quantidade == 0){
+            console.log("Quantidade inválida");
+        }
+    },
+
+    repor: function(quantidade){
+        this.estoque = this.estoque + quantidade;
+        console.log(`Estoque Atualizado: ${this.estoque}.`);
+    }
+};
+
+produto.vender(2);
+produto.repor(5);
+produto.vender(3);
+
