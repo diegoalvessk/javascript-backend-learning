@@ -16,9 +16,11 @@ const produtos = [
     }
 ];
 
-console.log(produtos[0].nome);
-console.log(produtos[1].preco);
-console.log(produtos[2].estoque);
-produtos[0].preco = 2000;
-produtos[1].estoque--;
-console.log(produtos);
+let quantidadeTotal = 0;
+for (let index = 0; index < produtos.length; index++) {
+    console.log(produtos[index].nome);
+    console.log(produtos[index].preco);
+    quantidadeTotal = quantidadeTotal + produtos[index].estoque;
+}
+
+console.log(quantidadeTotal);
