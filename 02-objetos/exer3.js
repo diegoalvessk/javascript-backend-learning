@@ -18,9 +18,13 @@ const produtos = [
 
 let quantidadeTotal = 0;
 for (let index = 0; index < produtos.length; index++) {
-    console.log(produtos[index].nome);
-    console.log(produtos[index].preco);
-    quantidadeTotal = quantidadeTotal + produtos[index].estoque;
+    if(produtos[index].preco > 150){
+        console.log(produtos[index].nome);
+    }
+
+    if(produtos[index].estoque >= 12){
+        quantidadeTotal++;
+    }
 }
 
-console.log(quantidadeTotal);
+console.log(`Produtos com estoque >= 12: ${quantidadeTotal}`);
