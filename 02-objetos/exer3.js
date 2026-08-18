@@ -24,10 +24,11 @@ const produtos = [
 
 // console.log(`Valor total do estoque: ${quantidadeTotal}`);
 
-let quantidadeTotal = 0;
-produtos.forEach(function(produto){
-    console.log(`${produto.nome} custa ${produto.preco} e possui ${produto.estoque} unidades.`)
-    quantidadeTotal = quantidadeTotal + (produto.estoque * produto.preco);
-})
+// let quantidadeTotal = 0;
+// produtos.forEach(function(produto){
+//     console.log(`${produto.nome} custa ${produto.preco} e possui ${produto.estoque} unidades.`)
+//     quantidadeTotal = quantidadeTotal + (produto.estoque * produto.preco);
+// })
 
-console.log(`Valor total do estoque: ${quantidadeTotal}`);
+// console.log(`Valor total do estoque: ${quantidadeTotal}`);
+
