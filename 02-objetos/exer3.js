@@ -62,3 +62,7 @@ else console.log(`Produto encontrado: ${produtoEncontrado2.nome}  - R$   ${produ
 const temProdutoSemEstoque = produtos.some(produto => produto.estoque === 0);
 
 console.log(temProdutoSemEstoque);
+
+const todosTemEstoque = produtos.every(produto => produto.estoque > 0);
+
+console.log(todosTemEstoque);
