@@ -32,9 +32,17 @@ const produtos = [
 //     }
 // })
 
-const estoqueBaixo = produtos.filter(produto => produto.estoque < 13);
-console.log(estoqueBaixo);
-console.log(`Quantidade de produtos com estoque baixo: ${estoqueBaixo.length}`);
+// const estoqueBaixo = produtos.filter(produto => produto.estoque < 13);
+// console.log(estoqueBaixo);
+// console.log(`Quantidade de produtos com estoque baixo: ${estoqueBaixo.length}`);
 
+const valoresEstoque = produtos.map(produto => produto.preco * produto.estoque);
+const nomesProdutos = produtos.map(produto => produto.nome);
+
+console.log(valoresEstoque);
+console.log(nomesProdutos);
+
+const produtosFormatados = produtos.map(produto => produto.nome + " - R$ " + produto.preco);
+console.log(produtosFormatados);
 
 // console.log(`Produtos com estoque menor que 13: ${estoqueMenor}`);
