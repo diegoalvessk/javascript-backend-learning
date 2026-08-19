@@ -58,3 +58,7 @@ let produtoEncontrado2 = produtos.find(produto => produto.id === 10);
 
 if(!produtoEncontrado2) console.log("Produto não encontrado");
 else console.log(`Produto encontrado: ${produtoEncontrado2.nome}  - R$   ${produtoEncontrado2.preco}`);
+
+const temProdutoSemEstoque = produtos.some(produto => produto.estoque === 0);
+
+console.log(temProdutoSemEstoque);
