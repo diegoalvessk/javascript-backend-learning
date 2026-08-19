@@ -24,10 +24,12 @@ const produtos = [
 
 // console.log(`Valor total do estoque: ${quantidadeTotal}`);
 
-let quantidadeTotal = 0;
+let produtosCaros = 0;
 produtos.forEach(function(produto){
-    console.log(`${produto.nome} custa ${produto.preco} e possui ${produto.estoque} unidades.`)
-    quantidadeTotal = quantidadeTotal + (produto.estoque * produto.preco);
+    console.log(`Produto: ${produto.nome} - R$ ${produto.preco}`)
+    if(produto.preco >= 200){
+        produtosCaros++;
+    }
 })
 
-// console.log(`Valor total do estoque: ${quantidadeTotal}`);
+console.log(`Produtos de 200 ou mais: ${produtosCaros}`);
