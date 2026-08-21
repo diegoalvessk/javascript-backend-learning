@@ -9,7 +9,7 @@ const produtos = [
         id: 2,
         nome: "Mouse",
         preco: 100,
-        estoque: 10
+        estoque: 0
     },
     {
         id: 3,
@@ -18,6 +18,7 @@ const produtos = [
         estoque: 12
     }
 ];
+
 // let quantidadeTotal = 0;
 // for (const produto of produtos) {
 //     console.log(`${produto.nome} custa ${produto.preco} e possui ${produto.estoque} unidades.`)
@@ -49,20 +50,20 @@ const produtos = [
 
 // console.log(`Produtos com estoque menor que 13: ${estoqueMenor}`);
 
-let produtoEncontrado = produtos.find(produto => produto.id === 2);
+// let produtoEncontrado = produtos.find(produto => produto.id === 2);
 
-if(!produtoEncontrado) console.log("Produto não encontrado");
-else console.log(`Produto encontrado: ${produtoEncontrado.nome}  - R$ ${produtoEncontrado.preco}`);
+// if(!produtoEncontrado) console.log("Produto não encontrado");
+// else console.log(`Produto encontrado: ${produtoEncontrado.nome}  - R$ ${produtoEncontrado.preco}`);
 
-let produtoEncontrado2 = produtos.find(produto => produto.id === 10);
+// let produtoEncontrado2 = produtos.find(produto => produto.id === 10);
 
-if(!produtoEncontrado2) console.log("Produto não encontrado");
-else console.log(`Produto encontrado: ${produtoEncontrado2.nome}  - R$   ${produtoEncontrado2.preco}`);
+// if(!produtoEncontrado2) console.log("Produto não encontrado");
+// else console.log(`Produto encontrado: ${produtoEncontrado2.nome}  - R$   ${produtoEncontrado2.preco}`);
 
-const temProdutoSemEstoque = produtos.some(produto => produto.estoque === 0);
+const temProdutoCaro = produtos.some(produto => produto.preco > 2000);
 
-console.log(temProdutoSemEstoque);
+console.log(`Existe produto acima de R$ 2000: ${temProdutoCaro}`);
 
-const todosTemEstoque = produtos.every(produto => produto.estoque > 0);
+const todosComEstoque = produtos.every(produto => produto.estoque > 0);
 
-console.log(todosTemEstoque);
+console.log(`Todos os produtos possuem estoque: ${todosComEstoque}`);
